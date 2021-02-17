@@ -70,7 +70,7 @@ function Hostevent(props) {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button className=" buttonLabel hostingButtons" color="primary" onClick={hostFormSubmit}>Submit</Button>{' '}
+                    <Button className=" buttonLabel hostingButtons" color="primary" onClick={props.hostFormSubmit}>Submit</Button>{' '}
                     <Button className="buttonLabel hostingButtons"  color="secondary" onClick={props.toggleHost}>Cancel</Button>
                 </ModalFooter>
             </Modal>
