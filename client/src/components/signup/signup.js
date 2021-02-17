@@ -13,7 +13,7 @@ function Signup(props) {
   } = props;
 
   function signUpFormSubmit() {
-    props.handleSingUpSubmit();
+    props.handleSignUpSubmit();
     props.toggleSignUp();
   }
 
@@ -28,16 +28,16 @@ function Signup(props) {
           <h6>sign up and see what its all about!</h6>
         </ModalHeader>
         <ModalBody>
-          <div className="">
+          <div className="buttonLabel">
             <input onChange={event => props.setUserName(event.target.value)} type="text" username="username" id="username" placeholder="Your User Name" />
           </div>
-          <div className="">
+          <div className="buttonLabel">
             <input onChange={event => props.setEmail(event.target.value)} type="email" name="email" id="email" placeholder="Your Email" />
           </div>
-          <div className="">
+          <div className="buttonLabel">
             <input onChange={event => props.setPassword(event.target.value)} type="password" name="pass" id="pass" placeholder="Password" />
           </div>
-          <div className="">
+          <div className="buttonLabel">
             <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
           </div>
           {/* <div className="">
@@ -46,7 +46,7 @@ function Signup(props) {
           </div> */}
         </ModalBody>
         <ModalFooter>
-          <Button className="signupButtons" color="primary" onClick={props.handleSingUpSubmit}>Submit</Button>{' '}
+          <Button className="signupButtons" color="primary" onClick={props.handleSignUpSubmit}>Submit</Button>{' '}
           <Button className="signupButtons" color="secondary" onClick={props.toggleSignUp}>Cancel</Button>
         </ModalFooter>
       </Modal>

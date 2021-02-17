@@ -121,11 +121,11 @@ function User(props) {
                                     isLogged={props.isLogged}
                                     eventName={item.eventName}
                                     eventString={item.eventString}
-                                    firstCat={item.category.first}
-                                    secondCat={item.category.second}
-                                    thirdCat={item.category.third}
-                                    briefDetails={item.briefDetails}
-                                    location={item.location}
+                                    firstCat={item.event.category.first}
+                                    secondCat={item.event.category.second}
+                                    thirdCat={item.event.category.third}
+                                    briefDetails={item.event.briefDetails}
+                                    location={item.event.location}
                                 />
                             ))
                         ) : (<h6 className="mb-4">I'm not hosting any events currently</h6>)

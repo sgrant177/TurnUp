@@ -100,9 +100,9 @@ function App() {
     // event.preventDefault();
     if (userName && email && password) {
       API.saveUser({
-        username: userName,
+        Username: userName,
         email: email,
-        password: password
+        Password: password
       })
         .then(res => console.log("succefuls Post"))
         .catch(err => console.log(err));
@@ -116,6 +116,12 @@ function App() {
     let eventString = eventName.replace(/\s/g, '').toLowerCase();
     if (eventName && briefDetails && details && eventType && mainCat && location) {
 
+      API.getEventstring({ eventString: eventString })
+      .then(res => {
+          API.updateUser(user._id, { $push: { hosting: res.data._id } })
+          window.location.href = '/event/' + res.data.eventString;
+      })
+      .catch(err => console.log(err));
 
       API.saveEvent({
         eventName: eventName,
@@ -139,12 +145,7 @@ function App() {
     }
 
 
-    API.getEventstring({ eventString: eventString })
-      .then(res => {
-          API.updateUser(user._id, { $push: { hosting: res.data._id } })
-          window.location.href = '/event/' + res.data.eventString;
-      })
-      .catch(err => console.log(err));
+    
     
     
   };

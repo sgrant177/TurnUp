@@ -41,7 +41,7 @@ function Hostevent(props) {
                     <h6>Dont worry, you'll be able to add more info likes dates on the hosted page...</h6>
                 </ModalHeader>
                 <ModalBody>
-                    <div className="d-inline-block">
+                    <div className="buttonLabel d-inline-block">
                         <input className="styleInput" onChange={event => props.setEventName(event.target.value)} placeholder="Event Name" />
                         <select onChange={event => props.setEventType(event.target.value)} placeholder="Event Type">
                             <option value="Select One">Select One</option>
@@ -49,14 +49,14 @@ function Hostevent(props) {
                             <option value="Ghost Kitchen">Ghost Kitchen</option>
                         </select>
                     </div>
-                    <div className="">
+                    <div className="buttonLabel">
                         <textarea onChange={event => props.setBriefDetails(event.target.value)} rows="1" cols="75">Brief description here</textarea>
                     </div>
-                    <div className="">
+                    <div className="buttonLabel">
                         <textarea onChange={event => props.setDetails(event.target.value)} rows="4" cols="75">Brief description here</textarea>
                         
                     </div>
-                    <div className="">
+                    <div className="buttonLabel">
                         <select onChange={event => props.setMainCat(event.target.value)} placeholder="Main Category">
                             <option value="Select One">Select One</option>
                             <option value="Food">Food</option>
@@ -65,13 +65,13 @@ function Hostevent(props) {
                         <input onChange={event => props.setSubCat1(event.target.value)} placeholder="Sub Category" />
                         <input onChange={event => props.setSubCat2(event.target.value)} placeholder="Sub Category" />
                     </div>
-                    <div className="">
+                    <div className="buttonLabel">
                         <input onChange={event => props.setLocation(event.target.value)} placeholder="Location" />
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button className="hostingButtons" color="primary" onClick={hostFormSubmit}>Submit</Button>{' '}
-                    <Button className="hostingButtons"  color="secondary" onClick={props.toggleHost}>Cancel</Button>
+                    <Button className=" buttonLabel hostingButtons" color="primary" onClick={hostFormSubmit}>Submit</Button>{' '}
+                    <Button className="buttonLabel hostingButtons"  color="secondary" onClick={props.toggleHost}>Cancel</Button>
                 </ModalFooter>
             </Modal>
         </div >
