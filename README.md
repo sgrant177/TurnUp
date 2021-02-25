@@ -3,7 +3,7 @@
 ## Description
 TurnUp is a social hub that allows pop-up shop owners and customers alike to be able to signup and host their pop-ups, allow users to view the different pop-ups being hosted, and keep track of the number of people that plan to attend your event.
 
-<img src="turnup.jpg">
+<img src="turnup1.jpg">
 
 ## Technologies Used
 <ul>
